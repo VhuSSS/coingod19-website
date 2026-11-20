@@ -48,3 +48,6 @@
   .note-number { display: none; }
 }
 
+.project-visual::before { display: none; }
+@media(max-width:700px) { .note::before { background-size: auto 100%; } }
+
