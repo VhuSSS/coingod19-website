@@ -1,0 +1,50 @@
+/* Editorial images connect the concept projects with their journal entries. */
+.project-visual {
+  height: 280px;
+  background-image: url('web3-concepts.png');
+  background-size: 300% auto;
+  background-repeat: no-repeat;
+}
+.visual-01 { background-position: left center; }
+.visual-02 { background-position: center center; }
+.visual-03 { background-position: right center; }
+.project-visual .project-glyph, .project-visual .visual-orbit { display: none; }
+.project-visual::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(180deg, #02061750, transparent 25% 60%, #020617d9);
+  pointer-events: none;
+}
+.project-code, .project-name { z-index: 1; color: #e0e7ff; }
+.project-name { font-size: 14px; }
+.about > div:last-child { display: grid; grid-template-columns: minmax(0,1fr) 240px; gap: 24px 40px; align-items: center; }
+.about h2 { grid-column: 1/-1; }
+.about-bottom { grid-column: 1; }
+.about-portrait { margin: 0; grid-column: 2; grid-row: 2; }
+.about-portrait img {
+  width: 100%; aspect-ratio: 1; display: block; object-fit: cover;
+  border-radius: 24px; border: 1px solid #a5b4fc40;
+  box-shadow: 0 20px 60px #6366f120;
+}
+.note { grid-template-columns: 150px 28px minmax(0,1fr) 44px; gap: 24px; }
+.note::before {
+  content: ''; display: block; width: 150px; height: 110px;
+  border-radius: 12px; border: 1px solid #a5b4fc26;
+  background-image: url('web3-concepts.png');
+  background-size: 300% auto; background-position: left center;
+}
+.note[data-note=community]::before { background-position: center center; }
+.note[data-note=identity]::before { background-position: right center; }
+.note:hover::before { border-color: #a5b4fc80; }
+@media(max-width:1000px) {
+  .about > div:last-child { grid-template-columns: minmax(0,1fr) 190px; gap: 24px; }
+  .project-visual { height: 230px; }
+}
+@media(max-width:700px) {
+  .about > div:last-child { grid-template-columns: 1fr; }
+  .about-portrait { grid-column: 1; grid-row: 3; max-width: 320px; }
+  .project-visual { height: 270px; }
+  .note { grid-template-columns: 76px minmax(0,1fr) 28px; gap: 12px; }
+  .note::before { width: 76px; height: 100px; border-radius: 9px; }
+  .note-number { display: none; }
+}
+
