@@ -1,0 +1,49 @@
+/* Typography: expressive titles, readable copy, compact technical labels. */
+:root {
+  --font-body: 'Inter', 'Noto Sans SC', 'Microsoft YaHei', sans-serif;
+  --font-display: 'Bricolage Grotesque', 'Noto Sans SC', sans-serif;
+  --font-editorial: 'Noto Serif SC', 'Songti SC', serif;
+  --font-label: 'IBM Plex Mono', ui-monospace, Consolas, monospace;
+}
+body { font-family: var(--font-body); font-weight: 400; letter-spacing: .015em; }
+button, input, textarea, select { font-family: inherit; }
+.brand { font-family: var(--font-display); font-weight: 700; letter-spacing: .025em; }
+.nav nav a { font-size: 13px; font-weight: 500; letter-spacing: .05em; }
+.hero h1, html[lang=en] .hero h1 {
+  font-family: var(--font-display); font-weight: 800;
+  letter-spacing: -.045em; line-height: 1.25;
+}
+.hero .intro { font-weight: 400; letter-spacing: .035em; line-height: 2; }
+.hero .intro strong { font-weight: 600; color: #e2e8f0; }
+h2, .contact h2 {
+  font-family: var(--font-editorial); font-weight: 600;
+  letter-spacing: .035em; line-height: 1.6;
+}
+html[lang=en] h2, html[lang=en] .contact h2 {
+  font-family: var(--font-display); font-weight: 600; letter-spacing: -.035em; line-height: 1.2;
+}
+h3, .focus-grid h3, .journey-track h3 {
+  font-family: var(--font-display); font-weight: 600; letter-spacing: .015em; line-height: 1.6;
+}
+.note h3 { font-family: var(--font-editorial); font-weight: 500; letter-spacing: .025em; line-height: 1.7; }
+html[lang=en] .note h3 { font-family: var(--font-display); letter-spacing: -.015em; }
+.eyebrow, .section-label, .note-category, .studio-path, .studio-caption,
+.studio-index, .project-code, .step-number, .field-note > span, .journey-track small {
+  font-family: var(--font-label); font-weight: 400; letter-spacing: .12em; line-height: 1.7;
+}
+.hero .eyebrow { font-size: 11px; letter-spacing: .18em; }
+.section-label { font-size: 10px; }
+.project-copy p, .focus-grid p, .atlas-content p, .faq-list p { font-size: 14px; line-height: 1.95; }
+.note p { font-size: 13px; line-height: 1.9; }
+.field-note blockquote { font-family: var(--font-editorial); font-weight: 500; line-height: 1.8; letter-spacing: .05em; }
+html[lang=en] .field-note blockquote { font-family: var(--font-display); letter-spacing: -.015em; }
+.channel-copy > span:last-child { font-family: var(--font-body); font-weight: 500; letter-spacing: 0; }
+@media(max-width:700px) {
+  h2, .contact h2 { line-height: 1.5; letter-spacing: .015em; }
+  .hero h1 { letter-spacing: -.04em; }
+  .hero .intro { line-height: 1.95; letter-spacing: .015em; }
+  .project-copy p, .focus-grid p, .atlas-content p, .faq-list p { font-size: 13px; }
+  .section-label { font-size: 9px; letter-spacing: .1em; }
+  .nav nav a { font-size: 11px; letter-spacing: .02em; }
+}
+
