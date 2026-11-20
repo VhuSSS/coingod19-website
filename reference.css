@@ -1,0 +1,124 @@
+/* Reference refresh: indigo, violet and cyan over deep navy. */
+:root {
+  --paper: #020617;
+  --ink: #f8fafc;
+  --muted: #a9b8d0;
+  --line: #a5b4fc26;
+  --green: #67e8f9;
+  --sand: #c4b5fd;
+  --panel: #111a32b3;
+}
+body { background: var(--paper); color: var(--ink); }
+body::before {
+  background: radial-gradient(ellipse at 10% 10%, #6366f121, transparent 45%),
+    radial-gradient(ellipse at 90% 55%, #8b5cf619, transparent 50%);
+}
+.ambient-glow {
+  background: radial-gradient(ellipse at 20% 25%, #6366f138, transparent 43%),
+    radial-gradient(ellipse at 85% 55%, #8b5cf62e, transparent 40%),
+    radial-gradient(ellipse at 45% 90%, #06b6d41c, transparent 35%);
+  opacity: .9;
+  animation: ambient-drift 14s ease-in-out infinite alternate;
+}
+#network { opacity: .9; }
+.scroll-progress { background: linear-gradient(90deg, #6366f1, #a855f7, #22d3ee); }
+.nav:not(.scrolled), .nav.scrolled {
+  background: #050b1ed9;
+  backdrop-filter: blur(22px);
+  border-bottom: 1px solid var(--line);
+}
+.nav nav a { color: #cbd5e1; }
+.nav nav a:hover, .nav nav a:last-child { color: #67e8f9; }
+.brand-avatar { border-color: #a78bfa80; border-radius: 12px; }
+.language-switch { background: #ffffff06; border-color: #a5b4fc35; }
+.language-switch button[aria-pressed=true] {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6); color: white;
+}
+.hero { min-height: 680px; padding-block: 72px; gap: 60px; }
+.hero h1, html[lang=en] .hero h1 { line-height: 1.22; font-weight: 750; }
+.hero .highlight {
+  color: #a5b4fc;
+  background: linear-gradient(110deg, #a5b4fc, #c084fc 48%, #67e8f9);
+  background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.hero .intro { font-size: 16px; line-height: 1.95; }
+.hero-actions .dark {
+  background: linear-gradient(110deg, #6366f1, #8b5cf6); color: white;
+  border-color: #a5b4fc60; border-radius: 12px;
+  box-shadow: 0 8px 32px #6366f136;
+}
+.hero-actions .text-link { background: #ffffff05; border-color: #a5b4fc35; border-radius: 12px; }
+.hero-actions a { transition: transform .25s, box-shadow .25s; }
+.hero-actions a:hover { transform: translateY(-3px); box-shadow: 0 8px 35px #8b5cf63b; }
+.hero-art.studio-panel {
+  background: linear-gradient(145deg, #18203ec9, #0b1029d9);
+  border-color: #a5b4fc38; border-radius: 24px;
+  box-shadow: 0 30px 90px #0005, 0 0 70px #6366f112;
+  backdrop-filter: blur(18px);
+}
+.studio-bar { border-color: var(--line); background: #ffffff03; }
+.studio-path { color: #a5b4fc; }
+.alchemist-orbit { height: 235px; position: relative; display: grid; place-items: center; overflow: hidden; }
+.alchemist-orbit::before, .alchemist-orbit::after {
+  content: ''; position: absolute; width: 300px; height: 140px; border: 1px solid #a78bfa70;
+  border-radius: 50%; transform: rotate(-24deg); animation: orbit-shift 9s ease-in-out infinite alternate;
+}
+.alchemist-orbit::after { width: 290px; height: 165px; transform: rotate(36deg); border-color: #22d3ee60; animation-delay: -4s; }
+.alchemist-orbit img {
+  width: 158px; height: 158px; object-fit: cover; border-radius: 50%; z-index: 1;
+  border: 3px solid #c4b5fd70; box-shadow: 0 0 55px #8b5cf64d;
+  animation: portrait-drift 7s ease-in-out infinite;
+}
+.orbit-spark { position: absolute; width: 7px; height: 7px; background: #67e8f9; border-radius: 50%; box-shadow: 0 0 18px #22d3ee; left: 16%; top: 32%; animation: beacon 3s infinite; }
+.orbit-spark:last-child { left: auto; right: 15%; top: 65%; background: #c084fc; animation-delay: -1.5s; }
+.studio-content { padding-top: 0; }
+.studio-row { background: #ffffff04; border-color: #a5b4fc22; border-radius: 10px; }
+.studio-row:hover { background: #6366f119; border-color: #818cf870; }
+.entry-grid > a, .focus-grid article, .project-card, .atlas-shell {
+  background: linear-gradient(145deg, #17203bab, #0f1630ab); border-color: var(--line);
+  backdrop-filter: blur(14px);
+}
+.entry-grid > a { border-radius: 12px; padding: 20px; }
+.entry-grid > a:hover, .focus-grid article:hover { background: #6366f114; border-color: #818cf86b; }
+.focus-section, .lab-section { background: linear-gradient(120deg, #6366f109, #8b5cf60b, #06b6d406); }
+.section-label { color: #a5b4fc; }
+h2 { line-height: 1.4; }
+.focus-grid article { border-radius: 20px; }
+.focus-grid article:nth-child(2) .focus-symbol { color: #c084fc; }
+.focus-grid article:nth-child(3) .focus-symbol { color: #f0abfc; }
+.chips span { background: #6366f10d; color: #b8c5df; border-color: var(--line); }
+.atlas-shell, .project-card { border-radius: 20px; }
+.atlas-menu { background: #080e23aa; }
+.atlas-menu button[aria-pressed=true] { background: linear-gradient(110deg, #6366f12e, #8b5cf61a); border-color: #818cf866; color: #e0e7ff; }
+.map-flow > span { background: #6366f114; border-color: #818cf847; }
+.visual-01 { background: radial-gradient(ellipse, #06b6d442, transparent 75%), #101e36; }
+.visual-02 { background: radial-gradient(ellipse, #8b5cf655, transparent 75%), #1b1538; }
+.visual-03 { background: radial-gradient(ellipse, #6366f15c, transparent 75%), #121b39; }
+.visual-02 .project-glyph { color: #c4b5fd; }
+.visual-03 .project-glyph { color: #a5b4fc; }
+.project-card { transition: transform .3s, border-color .3s, box-shadow .3s; }
+.project-card:hover { transform: translateY(-6px); border-color: #a78bfa70; box-shadow: 0 20px 50px #6366f114; }
+.journey-track article { background: transparent; border-color: #818cf84d; }
+.contact { background: radial-gradient(ellipse at 90% 20%, #8b5cf62b, transparent 65%), linear-gradient(120deg, #111c39, #14102f); border-color: #a5b4fc3b; border-radius: 24px; }
+.contact-channel { background: #ffffff04; border-color: #a5b4fc26; }
+.contact-channel:hover { background: #6366f118; border-color: #818cf86b; }
+#copy-wechat { background: #6366f12b; color: #e0e7ff; border-color: #a5b4fc40; }
+dialog { background: #10162d; border-color: #818cf84d; }
+@keyframes portrait-drift { 50% { transform: translateY(-9px); box-shadow: 0 0 70px #8b5cf670; } }
+@keyframes orbit-shift { to { rotate: 20deg; opacity: .5; } }
+@media(max-width: 850px) {
+  .hero { gap: 28px; padding-block: 48px; min-height: 0; }
+}
+@media(max-width: 700px) {
+  .hero { gap: 36px; padding-block: 40px; }
+  .hero .intro { font-size: 14px; }
+  .hero-art.studio-panel { width: 100%; }
+  .alchemist-orbit { height: 210px; }
+  .entry-grid > a { padding: 12px 8px; }
+  .nav nav { border-top-color: var(--line); }
+}
+@media(prefers-reduced-motion: reduce) {
+  .alchemist-orbit *, .alchemist-orbit::before, .alchemist-orbit::after, .ambient-glow { animation: none; }
+  .hero-actions a, .project-card { transition: none; }
+}
+
