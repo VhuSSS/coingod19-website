@@ -4,4 +4,6 @@
 .nav nav { gap: clamp(12px, 1.8vw, 26px); }
 @media(max-width:850px) { .nav nav { overflow-x: auto; justify-content: flex-start; scrollbar-width: thin; } }
 @media(max-width:700px) { #services .focus-grid p { min-height: 0; } .hero .intro { line-height: 1.95; } }
+@media(max-width:850px) { .nav nav { display: flex; flex-wrap: nowrap; width: 100%; min-width: 0; gap: 24px; padding-block: 14px; } .nav nav a { flex: 0 0 auto; } }
+
 
